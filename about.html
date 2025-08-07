@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Kelurahan Matekko</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Tambahkan transisi untuk efek halus */
+      .nav-link {
+        transition: color 0.3s ease;
+      }
+      /* Warna teks saat aktif */
+      .nav-link.active {
+        color: #F6F8D5;
+        font-weight: bold;
+      }
+      /* CSS untuk navbar responsif */
+      @media (max-width: 700px) {
+        #nav-menu {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background-color: #205781;
+          padding: 1rem;
+          z-index: 1000;
+        }
+        #nav-menu.active {
+          display: block;
+        }
+        #nav-menu ul {
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+        #nav-menu ul li {
+          width: 100%;
+        }
+        #nav-menu ul li a {
+          display: block;
+          padding: 0.5rem 1rem;
+        }
+      }
+
+      /* Tambahkan transisi untuk efek halus */
+      .nav-link {
+        transition: color 0.3s ease;
+      }
+      /* Warna teks saat aktif */
+      .nav-link.active {
+        color: #F6F8D5;
+        font-weight: bold;
+      }
+
+      .hover-zoom:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+      }
+
+      .card:hover {
+        transform: translateY(-5px) scale(1.05);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .circle-img {
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin: auto;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-100 pt-14">
+    <header class="fixed top-0 left-0 right-0 bg-[#205781] p-2 flex items-center z-50 shadow-lg rounded-b-xl transition-all duration-300">
+        <div class="container mx-auto flex items-center">
+            <div class="flex items-center">
+                <img 
+                    alt="Logo of Bulukumba" 
+                    class="h-15 w-12 mr-4 rounded-full shadow-md hover:rotate-12 transition-transform duration-300" 
+                    height="70" 
+                    src="images/logo_bulukumba.png" 
+                    width="70"
+              />
+              <div>
+                  <h1 class="text-[#F6F8D5] text-xl font-bold tracking-wider">Kelurahan Matekko</h1>
+                  <p class="text-white text-sm opacity-80">Kabupaten Bulukumba</p>
+              </div>
+          </div>
+          <!-- Tambahkan ikon hamburger di sini -->
+          <button id="hamburger" class="md:hidden text-white text-2xl ml-auto">
+              <i class="fas fa-bars"></i>
+          </button>
+          <nav id="nav-menu" class="ml-auto hidden md:block">
+              <ul class="flex space-x-4 text-white">
+                  <li class="group relative">
+                      <a 
+                          class="relative z-10 font-bold nav-link px-3 py-2 
+                          group-hover:text-white 
+                          transition-all duration-300" 
+                          href="index.html"
+                      >
+                          Beranda
+                          <span class="absolute inset-0 bg-white bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 rounded-lg"></span>
+                      </a>
+                  </li>
+                  <li class="group relative">
+                      <a 
+                          class="relative z-10 font-bold nav-link px-3 py-2 
+                          group-hover:text-white 
+                          transition-all duration-300" 
+                          href="profildesa.html"
+                      >
+                          Profil Desa
+                          <span class="absolute inset-0 bg-white bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 rounded-lg"></span>
+                      </a>
+                  </li>
+                  <li class="group relative">
+                      <a 
+                          class="relative z-10 font-bold nav-link px-3 py-2 
+                          group-hover:text-white 
+                          transition-all duration-300" 
+                          href="infografis.html"
+                      >
+                          Infografis
+                          <span class="absolute inset-0 bg-white bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 rounded-lg"></span>
+                      </a>
+                  </li>
+                  <li class="group relative">
+                      <a 
+                          class="relative z-10 font-bold nav-link px-3 py-2 
+                          group-hover:text-white 
+                          transition-all duration-300" 
+                          href="potensidesa.html"
+                      >
+                          Potensi Desa
+                          <span class="absolute inset-0 bg-white bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 rounded-lg"></span>
+                      </a>
+                  </li>
+                  <li class="group relative">
+                      <a 
+                          class="relative z-10 font-bold nav-link px-3 py-2 
+                          group-hover:text-white 
+                          transition-all duration-300" 
+                          href="about.html"
+                      >
+                          About
+                          <span class="absolute inset-0 bg-white bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 rounded-lg"></span>
+                      </a>
+                  </li>
+              </ul>
+          </nav>
+      </div>
+  </header>
+
+    <div class="max-w-6xl mx-auto p-6">
+      <!-- Tentang Website -->
+
+      <div class="flex items-center mb-2">
+        <div class="w-1 bg-[#98D2C0] h-12 mr-4"></div>
+        <h1
+          class="text-4xl font-bold text-gray-800"
+          style="font-family: 'Poppins', sans-serif"
+        >
+          Tentang Website
+        </h1>
+      </div>
+      <h2 class="text-2xl font-semibold text-gray-500 mb-4">Kelurahan Matekko</h2>
+
+      <p class="mb-4 text-justify leading-relaxed">
+        Website Profil Kelurahan Matekko ini disusun oleh Sakinah Nurusyifa,
+        mahasiswa KKN Universitas Hasanuddin Gelombang 114 sebagai bagian dari 
+        implementasi program kerja di Kelurahan Matekko. Website ini tidak
+        akan terwujud tanpa dukungan penuh dari Kepala Kelurahan, aparat
+        kelurahan, dan partisipasi aktif masyarakat yang telah turut serta 
+        dalam setiap tahap pelaksanaannya. 
+      </p>
+
+      <p class="mb-4 text-justify leading-relaxed">
+        <span class="font-semibold text-[#4981AB]"
+          >Pembuatan website profil dan informasi kelurahan</span>
+        merupakan salah satu program kerja prioritas dalam mendukung
+        transparansi informasi dan digitalisasi desa. Website ini diharapkan
+        menjadi sarana komunikasi dan informasi yang bermanfaat, baik bagi
+        masyarakat lokal maupun khalayak luas. Melalui media ini, potensi desa 
+        dapat dipublikasikan secara lebih luas, sehingga membuka peluang 
+        pengembangan ekonomi, sosial, dan budaya desa.
+      </p>
+
+      <p class="mb-6 text-justify leading-relaxed">
+        Lebih dari sekadar program kerja, proyek ini adalah
+        <span class="font-semibold text-[#4981AB]"
+          >bentuk kontribusi mahasiswa terhadap pembangunan desa berbasis
+          teknologi informasi berkelanjutan</span
+        >.
+      </p>
+
+      <!-- Tentang Mahasiswa KKN -->
+      <div class="flex items-center mb-2">
+        <div class="w-1 bg-[#98D2C0] h-12 mr-4"></div>
+        <h1
+          class="text-4xl font-bold text-gray-800"
+          style="font-family: 'Poppins', sans-serif"
+        >
+          Tentang Mahasiswa KKN
+        </h1>
+      </div>
+      <h2 class="text-2xl font-semibold text-gray-500 mb-4">
+        Tim Pengembang Website
+      </h2>
+
+      <p class="mb-4 text-justify leading-relaxed">
+        Website ini merupakan salah satu bentuk kontribusi nyata dari 
+        Mahasiswa KKN Gelombang 114 Universitas Hasanuddin yang melaksanakan 
+        pengabdian di Kelurahan Matekko. Selama menjalankan kegiatan KKN, 
+        kami berada di bawah bimbingan
+        <span class="font-semibold text-[#4981AB]"
+          >Icha Musywirah Hamka, S.Sos., M.Si.</span>
+        dan tergabung dalam satu posko yang terdiri dari tujuh mahasiswa 
+        dari berbagai jurusan di Universitas Hasanuddin. Melalui program-program 
+        kerja yang disusun berdasarkan hasil observasi dan kebutuhan masyarakat 
+        setempat, kami berharap kehadiran kami dapat memberikan dampak positif 
+        dan berkelanjutan bagi perkembangan Kelurahan Matekko, khususnya dalam 
+        hal penyediaan informasi berbasis digital.
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-8">
+        <div
+          onclick="showPopup({
+                nama: 'SAKINAH NURUSYIFA',
+                nim: 'H071221049',
+                role: 'Website Developer',
+                foto: 'imageabout/fotoku.jpg',
+                deskripsi: 'Mahasiswa Universitas Hasanuddin, Fakultas MIPA, Prodi Sistem Informasi, Angkatan 22, salah satu anggota dari tim KKNT-114 Kelurahan Matekko'
+            })"
+          class="bg-white p-4 rounded-xl card text-center w-64 shadow-md cursor-pointer"
+        >
+          <img
+            src="imageabout/fotoku.jpg"
+            alt="Foto Qia"
+            class="circle-img mb-3 object-cover rounded-full border-4 mx-auto"
+            style="border-color: #205781"
+          />
+          <p class="font-semibold mt-2" style="color: #205781">
+            SAKINAH NURUSYIFA
+          </p>
+          <p class="text-sm text-gray-500">Website Developer</p>
+        </div>
+
+        <div
+          onclick="showPopup({
+                nama: 'TIM KKNT-114 KELURAHAN MATEKKO',
+                nim: '',
+                role: '',
+                foto: 'imageabout/fotoposko.jpg',
+                deskripsi: 'Mahasiswa KKN Universitas Hasanuddin Gelombang 114 - Kelurahan Matekko'
+            })"
+          class="bg-white p-4 rounded-xl card text-center w-64 shadow-md cursor-pointer"
+        >
+          <img
+            src="imageabout/fotoposko.jpg"
+            alt="Foto kami"
+            class="circle-img mb-3 object-cover rounded-full border-4 mx-auto"
+            style="border-color: #205781"
+          />
+          <p class="font-semibold mt-2" style="color: #205781">
+            MAHASISWA KKN GEL. 114
+          </p>
+          <p class="text-sm text-gray-500">POSKO KEL. MATEKKO</p>
+        </div>
+
+        <div
+          onclick="showPopup({
+                nama: 'Logo Posko KKN UNHAS',
+                nim: '',
+                role: '',
+                foto: 'images/logoposko.png',
+                deskripsi: 'Logo Posko KKN Universitas Hasanuddin Kelurahan Matekko'
+            })"
+          class="bg-white p-4 rounded-xl card text-center w-64 shadow-md cursor-pointer"
+        >
+          <img
+            src="images/logoposko.png"
+            alt="Foto Logo"
+            class="circle-img mb-3 object-cover rounded-full border-4 mx-auto"
+            style="border-color: #205781"
+          />
+          <p class="font-semibold mt-2" style="color: #205781">
+            Logo Posko KKN UNHAS
+          </p>
+          <p class="text-sm text-gray-500">Kelurahan Matekko</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Footer -->
+<div class="bg-[#205781] text-white pb-4">
+  <div class="container mx-auto px-6 py-8">
+
+    <!-- Area atas: teks di atas logo di mobile, logo kiri teks tengah di desktop -->
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+
+      <!-- Teks: muncul dulu di mobile, di tengah pada desktop -->
+      <div class="w-full text-center md:text-center md:w-full mb-4 md:mb-0">
+        <h1 class="text-xl text-[#F6F8D5] font-bold">Kelurahan Matekko</h1>
+        <p class="text-sm text-gray-300">Kec. Gantarang, Kab. Bulukumba, Sulawesi Selatan</p>
+      </div>
+
+      <!-- Logo: muncul di bawah teks pada mobile, di kiri saat desktop -->
+      <div class="flex justify-center md:justify-start space-x-4 w-full md:w-auto">
+        <img alt="Logo 1" src="images/logo_bulukumba.png" class="w-14 h-14 object-contain opacity-80 hover:opacity-100 transition-opacity" />
+        <img alt="Logo 2" src="images/logoposko.png" class="w-14 h-14 object-contain opacity-80 hover:opacity-100 transition-opacity" />
+        <img alt="Logo 3" src="images/logoounhas.png" class="w-14 h-14 object-contain opacity-80 hover:opacity-100 transition-opacity" />
+      </div>
+    </div>
+
+    <!-- Garis -->
+    <div class="border-t border-gray-500 mb-6"></div>
+
+    <!-- Konten bawah -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-justify">
+      <div>
+        <h2 class="text-base text-[#F6F8D5] font-bold">Website Profil Kelurahan</h2>
+        <p class="text-xs text-gray-300">
+          Website Profil Kelurahan merupakan situs web yang memuat informasi dasar mengenai kelurahan, sejarah, visi dan misi, sampai dengan peta wilayah kelurahan.
+        </p>
+      </div>
+      <div>
+        <h2 class="text-base text-[#F6F8D5] font-bold">Developer</h2>
+        <p class="text-xs text-gray-300">
+          Website ini dibuat oleh Sakinah Nurusyifa, Mahasiswa KKN Universitas Hasanuddin Gelombang 114 Kelurahan Matekko pada Juli 2025.
+        </p>
+      </div>
+      <div>
+        <h2 class="text-base text-[#F6F8D5] font-bold">Harapan Dan Tujuan</h2>
+        <p class="text-xs text-gray-300">
+          Situs web profil ini dibuat untuk tujuan promosi dan publisitas Kelurahan agar lebih dikenal oleh khalayak ramai baik di dalam maupun di luar Kelurahan Matekko.
+        </p>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="text-center mt-6 border-t border-gray-500 pt-4">
+      <p class="text-xs text-gray-300">© 2025 Kelurahan Matekko - All rights reserved</p>
+    </div>
+  </div>
+</div>
+
+    <!-- Popup -->
+    <div
+      id="popup"
+      class="hidden fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50"
+    >
+      <div
+        class="bg-white rounded-xl shadow-lg w-full max-w-sm p-6 relative text-center"
+      >
+        <button
+          onclick="closePopup()"
+          class="absolute top-2 right-4 text-gray-500 hover:text-black text-2xl font-bold"
+        >
+          &times;
+        </button>
+
+        <h2
+          id="popupNama"
+          class="text-xl font-bold mb-1"
+          style="color: #205781"
+        ></h2>
+        <p id="popupNIM" class="text-sm text-gray-600 mb-2 hidden"></p>
+
+        <img
+          id="popupFoto"
+          src=""
+          alt="Foto"
+          class="w-48 h-auto object-cover mx-auto mb-4 rounded-md"
+        />
+
+        <p
+          id="popupRole"
+          class="text-base font-semibold text-gray-700 mb-1 hidden"
+        ></p>
+        <p id="popupDeskripsi" class="text-sm text-gray-600"></p>
+      </div>
+    </div>
+
+    <script>
+      // Toggle hamburger menu
+      const hamburger = document.getElementById("hamburger");
+      const navMenu = document.getElementById("nav-menu");
+      hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+      });
+
+      function showPopup(data) {
+        document.getElementById("popupNama").innerText = data.nama || "";
+
+        const nimElem = document.getElementById("popupNIM");
+        if (data.nim) {
+          nimElem.innerText = data.nim;
+          nimElem.classList.remove("hidden");
+        } else {
+          nimElem.classList.add("hidden");
+        }
+
+        const roleElem = document.getElementById("popupRole");
+        if (data.role) {
+          roleElem.innerText = data.role;
+          roleElem.classList.remove("hidden");
+        } else {
+          roleElem.classList.add("hidden");
+        }
+
+        document.getElementById("popupFoto").src = data.foto || "";
+        document.getElementById("popupDeskripsi").innerText =
+          data.deskripsi || "";
+        document.getElementById("popup").classList.remove("hidden");
+      }
+
+      function closePopup() {
+        document.getElementById("popup").classList.add("hidden");
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const currentPage = window.location.pathname.split("/").pop(); // nama file
+        const links = document.querySelectorAll(".nav-link");
+
+        links.forEach((link) => {
+          if (link.getAttribute("href") === currentPage) {
+            link.classList.add("active");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

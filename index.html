@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Kelurahan Matekko</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css"> 
+    <style>
+        @media (max-width: 700px) {
+            #nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: #205781;
+                padding: 1rem;
+                z-index: 1000;
+            }
+            #nav-menu.active {
+                display: block;
+            }
+            #nav-menu ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            #nav-menu ul li {
+                width: 100%;
+            }
+            #nav-menu ul li a {
+                display: block;
+                padding: 0.5rem 1rem;
+            }
+        }
+
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+        .nav-link.active {
+            color: #F6F8D5;
+            font-weight: bold;
+        }
+        .hover-zoom:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Navbar -->
+    <header class="fixed top-0 left-0 right-0 bg-[#205781] p-2 flex items-center z-50 shadow-lg rounded-b-xl transition-all duration-300">
+        <div class="container mx-auto flex items-center justify-between">
+            <div class="flex items-center">
+                <img alt="Logo of Bulukumba" class="h-15 w-12 mr-4 rounded-full shadow-md hover:rotate-12 transition-transform duration-300" height="70" src="images/logo_bulukumba.png" width="70" />
+                <div>
+                    <h1 class="text-[#F6F8D5] text-xl font-bold tracking-wider">Kelurahan Matekko</h1>
+                    <p class="text-white text-sm opacity-80">Kabupaten Bulukumba</p>
+                </div>
+            </div>
+            <button id="hamburger" class="md:hidden text-white text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="nav-menu" class="ml-auto hidden md:block">
+              <ul class="flex space-x-4 text-white">
+                  <li class="group relative">
+                      <a 
+                          class="relative z-10 font-bold nav-link px-3 py-2 
+                          group-hover:text-white 
+                          transition-all duration-300" 
+                          href="index.html"
+                      >
+                          Beranda
+                          <span class="absolute inset-0 bg-white bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 rounded-lg"></span>
+                      </a>
+                  </li>
+                  <li class="group relative">
+                      <a 
+                          class="relative z-10 font-bold nav-link px-3 py-2 
+                          group-hover:text-white 
+                          transition-all duration-300" 
+                          href="profildesa.html"
+                      >
+                          Profil Desa
+                          <span class="absolute inset-0 bg-white bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 rounded-lg"></span>
+                      </a>
+                  </li>
+                  <li class="group relative">
+                      <a 
+                          class="relative z-10 font-bold nav-link px-3 py-2 
+                          group-hover:text-white 
+                          transition-all duration-300" 
+                          href="infografis.html"
+                      >
+                          Infografis
+                          <span class="absolute inset-0 bg-white bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 rounded-lg"></span>
+                      </a>
+                  </li>
+                  <li class="group relative">
+                      <a 
+                          class="relative z-10 font-bold nav-link px-3 py-2 
+                          group-hover:text-white 
+                          transition-all duration-300" 
+                          href="potensidesa.html"
+                      >
+                          Potensi Desa
+                          <span class="absolute inset-0 bg-white bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 rounded-lg"></span>
+                      </a>
+                  </li>
+                  <li class="group relative">
+                      <a 
+                          class="relative z-10 font-bold nav-link px-3 py-2 
+                          group-hover:text-white 
+                          transition-all duration-300" 
+                          href="about.html"
+                      >
+                          About
+                          <span class="absolute inset-0 bg-white bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 rounded-lg"></span>
+                      </a>
+                  </li>
+              </ul>
+          </nav>
+        </div>
+    </header>
+
+<body class="bg-gray-200">
+    <div class="relative">
+        <img alt="Background image of a park with a clock tower and trees" class="w-full h-[550px] object-cover" height="550" src="images/potensi.jpg" width="1920"/>
+        <div class="absolute inset-0 bg-gradient-to-r from-[#34699A] to-transparent"></div>
+        <div class="absolute inset-0 flex items-center justify-start p-20">
+            <div class="text-white my-8">
+                <div class="border-l-4 border-[#4F959D] pl-4 leading-loose">
+                    <h1 class="text-4xl text-[#FDF5AA] font-bold mb-4" style="font-family: 'Poppins', sans-serif;">Selamat Datang,</h1>
+                    <h2 class="text-5xl font-bold" style="font-family: 'Poppins', sans-serif;">
+                        Di Website Profil
+                        <br/>
+                        Kelurahan Matekko
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mx-auto px-8 p-4 text-gray-800">
+        <div class="flex flex-col md:flex-row">
+            <div class="md:w-2/3">
+                <div class="flex items-center mb-1">
+                    <div class="w-1 bg-[#98D2C0] h-12 mr-4"></div>
+                    <h1 class="text-4xl font-bold text-gray-800" style="font-family: 'Poppins', sans-serif;">Profil</h1>
+                </div>
+                <h2 class="text-2xl text-gray-500 mb-4" style="font-family: 'Poppins', sans-serif;">Kelurahan Matekko</h2>
+                <p class="mb-4 text-justify mr-4" style="font-family: 'Poppins', sans-serif;">
+                    Kelurahan Matekko merupakan salah satu kelurahan yang berada di Kecamatan Gantarang, Kabupaten Bulukumba, Provinsi Sulawesi Selatan. Kelurahan ini merupakan bagian dari wilayah barat Kota Bulukumba yang berperan penting dalam perkembangan dan kemajuan wilayah tersebut.
+                </p>
+                <p class="mb-4 text-justify mr-4" style="font-family: 'Poppins', sans-serif;">
+                    Luas wilayah Kelurahan ini seluas 268 Kilometer persegi. Kelurahan ini memiliki batas wilayah yang jelas dengan beberapa desa dan kelurahan di sekitarnya. Kelurahan Matekko berbatasan di sebelah utara dengan Desa Bontomacinna, di sebelah timur berbatasan dengan Kelurahan Bintarore, di sebelah selatan berbatasan langsung dengan Laut Flores, serta di sebelah barat berbatasan dengan Kelurahan Jalanjang. 
+                </p>
+            </div>
+            <div class="md:w-1/3 flex justify-center md:justify-end">
+                <div class="text-center w-full">
+                    <img 
+                        src="images/kantor.jpg" 
+                        alt="Kantor Kelurahan Matekko" 
+                        class="w-full h-400 object-cover rounded-lg shadow-lg transition-transform duration-300 hover:scale-105"
+                    />
+                    <p class="text-sm text-gray-500 mt-2 font-semibold tracking-wide">
+                        Kantor Kelurahan Matekko, Kecamatan Gantarang, Kabupaten Bulukumba
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mx-auto px-8 p-5 bg-[#4981AB] text-white rounded-2xl">
+    <div class="flex flex-col md:flex-row">
+        <div class="md:w-1/4 flex items-center justify-center md:justify-end">
+            <div class="flex flex-col space-y-4 items-center md:items-end">
+
+                <div class="text-center">
+                    <img src="images/masjid.jpg" alt="Sejarah Kelurahan 1" class="w-full h-[400px] object-cover rounded-lg shadow-lg transition-transform duration-300 hover:scale-105" />
+                    <p class="text-sm text-gray-100 mt-2 font-semibold tracking-wide">
+                    Masjid Taqwa Ponre Kelurahan Matekko Bulukumba
+                    </p>
+                </div>
+
+                <div class="text-center">
+                    <img src="images/makam.jpg" alt="Sejarah Kelurahan 2" class="w-full h-[400px] object-cover rounded-lg shadow-lg transition-transform duration-300 hover:scale-105" />
+                    <p class="text-sm text-gray-100 mt-2 font-semibold tracking-wide">
+                    Makam Pahlawan Nasional H.A. Sultan Dg. Radja
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="md:w-5/6 ml-4 pl-8">
+            <div class="flex items-center mb-1">
+                <div class="w-1 bg-[#4F959D] h-12 mr-4"></div>
+                <h1 class="text-4xl font-bold text-[#F6F8D5]" style="font-family: 'Poppins', sans-serif;">Sejarah Singkat</h1>
+            </div>
+            <h2 class="text-3xl text-gray-200 mb-4" style="font-family: 'Poppins', sans-serif;">Kelurahan Matekko</h2>
+
+            <p class="mb-4 text-justify text-white" style="font-family: 'Poppins', sans-serif;">
+                Matekko berasal dari kata yang berarti terampil. Nama ini mencerminkan karakter masyarakatnya, yang dikenal sebagai orang-orang dengan berbagai keterampilan, seperti tukang tenun, tukang kayu, pandai besi, dan sebagainya.
+            </p>
+
+            <p class="text-justify text-yellow-300 font-semibold text-xl" style="font-family: 'Poppins', sans-serif;">
+                Asal Usul Lingkungan Ponre
+            </p>
+            <p class="mb-4 text-justify text-white" style="font-family: 'Poppins', sans-serif;">
+                Lingkungan Ponre awalnya dihuni oleh sekelompok masyarakat dari Polewali. Wilayah ini belum memiliki nama hingga dibangunnya Masjid Taqwa oleh pendatang dari daerah Ponre di Kabupaten Bone — sebuah kecamatan di Bone juga bernama Ponre. Sejak saat itu, masyarakat mulai menyebut masjid tersebut sebagai Masjid Ponre, dan akhirnya wilayah di sekitarnya dikenal sebagai Lingkungan Ponre.
+            </p>
+            <p class="text-justify text-yellow-300 font-semibold text-xl" style="font-family: 'Poppins', sans-serif;">
+                Pembentukan Kelurahan Matekko
+            </p>
+            <p class="mb-2 text-justify text-white" style="font-family: 'Poppins', sans-serif;">
+                Dulunya, wilayah Matekko merupakan satu kesatuan dengan Jalanjang dan Mariorennu, yang tergabung dalam satu kelurahan bernama Kelurahan Matekko. Nama Matekko disepakati sebagai nama kelurahan karena menggambarkan identitas masyarakatnya yang terampil.
+            </p>
+            <p class="mb-1 text-justify text-white" style="font-family: 'Poppins', sans-serif;">
+                Seiring berjalannya waktu dan perkembangan wilayah, Kelurahan Matekko kemudian dimekarkan menjadi tiga kelurahan, yaitu:
+            </p>
+            <ul class="list-disc list-inside text-white mb-4" style="font-family: 'Poppins', sans-serif;">
+                <li>Kelurahan Matekko</li>
+                <li>Kelurahan Jalanjang</li>
+                <li>Kelurahan Mariorennu</li>
+            </ul>
+            <p class="text-justify text-yellow-300 font-semibold text-xl" style="font-family: 'Poppins', sans-serif;">
+                Sejarah Pemerintahan dan Pembagian Wilayah
+            </p>
+            <p class="mb-1 text-justify text-white" style="font-family: 'Poppins', sans-serif;">
+                Pada masa lalu, wilayah Kecamatan Gantarang merupakan bagian dari dua distrik, yaitu:
+            </p>
+            <ul class="list-disc list-inside text-white mb-2" style="font-family: 'Poppins', sans-serif;">
+                <li>Distrik Gantarang</li>
+                <li>Distrik Kindang</li>
+            </ul>
+            <p class="mb-1 text-justify text-white" style="font-family: 'Poppins', sans-serif;">
+                Ketika terjadi pemekaran wilayah, kedua distrik ini kemudian ditetapkan menjadi dua kecamatan, yaitu:
+            </p>
+            <ul class="list-disc list-inside text-white mb-2" style="font-family: 'Poppins', sans-serif;">
+                <li>Kecamatan Gantarang</li>
+                <li>Kecamatan Kindang</li>
+            </ul>
+            <p class="mb-4 text-justify text-white" style="font-family: 'Poppins', sans-serif;">
+                Awalnya, Kecamatan Gantarang memiliki 10 desa. Setelah terbentuknya Kecamatan Kindang, beberapa desa dipisahkan dari Gantarang dan masuk ke wilayah Kindang.
+            </p>
+            <p class="text-justify text-yellow-300 font-semibold text-xl" style="font-family: 'Poppins', sans-serif;">
+                Sistem Pemerintahan Tradisional
+            </p>
+
+            <p class="mb-1 text-justify text-white" style="font-family: 'Poppins', sans-serif;">
+                Sebelum terbentuknya sistem pemerintahan desa secara resmi, wilayah-wilayah ini dipimpin oleh tokoh masyarakat yang disebut dengan berbagai gelar adat, seperti:
+            </p>
+            <ol class="list-decimal list-inside text-white mb-4 space-y-2" style="font-family: 'Poppins', sans-serif;">
+                <li>
+                    <strong class="text-[#F6F8D5]">Jennang</strong>: Pemimpin masyarakat yang dituakan. Istilah ini berasal dari "Jannang Romang", yang berarti penguasa atau penjaga hutan.
+                </li>
+                <li>
+                    <strong class="text-[#F6F8D5]">Lompo</strong>: Pemimpin wilayah yang memiliki pengaruh besar.
+                </li>
+                <li>
+                    <strong class="text-[#F6F8D5]">Macoa</strong>: Tokoh masyarakat dengan peran kepemimpinan.
+                </li>
+                <li>
+                    <strong class="text-[#F6F8D5]">Gallarang</strong>: Pemimpin adat di suatu wilayah.
+                </li>
+                <li>
+                    <strong class="text-[#F6F8D5]">Bangkeng Bate</strong>: Secara harfiah berarti "pemegang bendera", biasanya saat perang.
+                </li>
+            </ol>
+            <p class="mb-1 text-justify text-white" style="font-family: 'Poppins', sans-serif;">
+                Berikut adalah pembagian wilayah dan pemimpinnya pada masa lalu:
+            </p>
+            <ul class="list-decimal list-inside text-white mb-4 space-y-2" style="font-family: 'Poppins', sans-serif;">
+                <li><strong class="text-[#F6F8D5]">Palambarae, Polewali, dan Taccorong</strong>: dipimpin oleh <strong class="text-[#F6F8D5]">Panreguru</strong></li>
+                <li><strong class="text-[#F6F8D5]">Paenre Lompoe, Bontosunggu, dan Bukit Tinggi</strong>: dipimpin oleh <strong class="text-[#F6F8D5]">Lompo</strong></li>
+                <li><strong class="text-[#F6F8D5]">Bialo, Barombong, dan Dampang</strong>: dipimpin oleh <strong class="text-[#F6F8D5]">Jennang</strong></li>
+                <li><strong class="text-[#F6F8D5]">Matekko</strong>: dipimpin oleh <strong class="text-[#F6F8D5]">Lompo</strong></li>
+                <li><strong class="text-[#F6F8D5]">Jalanjang</strong>: dipimpin oleh <strong class="text-[#F6F8D5]">Jennang</strong></li>
+                <li><strong class="text-[#F6F8D5]">Mariorennu</strong>: dipimpin oleh <strong class="text-[#F6F8D5]">Macoa</strong></li>
+                <li><strong class="text-[#F6F8D5]">Bontomacinna</strong>: dipimpin oleh <strong class="text-[#F6F8D5]">Lompo</strong></li>
+                <li><strong class="text-[#F6F8D5]">Gattareng</strong>: dipimpin oleh <strong class="text-[#F6F8D5]">Gallarang</strong></li>
+                <li><strong class="text-[#F6F8D5]">Malewang</strong>: dipimpin oleh <strong class="text-[#F6F8D5]">Bangkeng Bate</strong></li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+
+    <div class="max-w-6xl mx-auto p-4">
+        <div class="flex items-center mb-1">
+            <div class="w-1 bg-[#98D2C0] h-12 mr-4"></div>
+            <h1 class="text-4xl font-bold text-gray-800">Peta Lokasi Kelurahan</h1>
+            </div>
+            <p class="text-gray-500">Peta Lokasi Kelurahan Matekko</p>
+            <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-white p-6 rounded-lg shadow">
+            <h2 class="text-2xl font-bold text-gray-800">Kelurahan Matekko</h2>
+            <hr class="my-4" />
+            <p class="text-gray-500 font-semibold">Batas Kelurahan</p>
+            <div class="grid grid-cols-2 gap-4 mt-2">
+              <div>
+                <p class="text-gray-500">Utara</p>
+                <p class="text-gray-800">Desa Bontomacinna
+                </p>
+              </div>
+              <div>
+                <p class="text-gray-500">Timur</p>
+                <p class="text-gray-800">Kelurahan Bintarore</p>
+              </div>
+              <div>
+                <p class="text-gray-500">Selatan</p>
+                <p class="text-gray-800">Laut Flores</p>
+              </div>
+              <div>
+                <p class="text-gray-500">Barat</p>
+                <p class="text-gray-800">Kelurahan Jalanjang</p>
+              </div>
+            </div>
+            <hr class="my-4" />
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <p class="text-gray-500 font-semibold">Garis Lintang</p>
+                <p class="text-gray-800">5°33’28.0”S</p>
+              </div>
+              <div>
+                <p class="text-gray-500 font-semibold">Garis Bujur</p>
+                <p class="text-gray-800">120°9’49.9”T</p>
+              </div>
+              <div>
+                <p class="text-gray-500 font-semibold">Luas Wilayah</p>
+                <p class="text-gray-800">268.000.000 m²</p>
+              </div>
+            
+              <div>
+                <p class="text-gray-500 font-semibold">Jumlah Penduduk</p>
+                <p class="text-gray-800">3.325 Jiwa</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow">
+            <div class="text-center w-full">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d17885.266497404406!2d120.14986300665784!3d-5.557983527305954!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dbbffe252f8923d%3A0xc5fcc091633dc858!2sMattekko%2C%20Kec.%20Gantarang%2C%20Kabupaten%20Bulukumba%2C%20Sulawesi%20Selatan!5e1!3m2!1sid!2sid!4v1753579338792!5m2!1sid!2sid"
+                    width="100%" 
+                    height="400" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    class="rounded-lg shadow-md"
+                ></iframe>
+                <p class="text-sm text-gray-500 mt-2">
+                    Lokasi Kelurahan Matekko, Kecamatan Gantarang, Bulukumba
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div class="px-8 p-8 flex bg-[#4981AB] items-center justify-center mt-4 mb-8">
+        <div class="text-center">
+            <h1 class="text-3xl font-bold text-white mb-8">Data Monografi</h1>
+            <div class="flex justify-center space-x-8">
+                <div class="text-center">
+                    <p class="text-4xl font-bold text-[#F6F8D5]">2</p>
+                    <p class="text-gray-100">Dusun</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-4xl font-bold text-[#F6F8D5]">3.325</p>
+                    <p class="text-gray-100">Jumlah Penduduk</p>
+                </div>
+                <div class=" text-center">
+                    <p class="text-4xl font-bold text-[#F6F8D5]">268 Km<sup>2</sup></p>
+                    <p class="text-gray-100">Luas Kelurahan</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-4xl font-bold text-[#F6F8D5]">981</p>
+                    <p class="text-gray-100">Jumlah KK</p>
+                </div>
+            </div>
+            <div class="mt-8">
+                <a href="#" class="text-[#F6F8D5] flex items-center justify-center">
+                    <i class="fas fa-arrow-right mr-2"></i> Selengkapnya
+                </a>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script>
+      
+      document.addEventListener('DOMContentLoaded', function() {
+      
+          const currentLocation = location.pathname.split('/').pop();
+          
+      
+          const navLinks = document.querySelectorAll('.nav-link');
+          navLinks.forEach(link => {
+              
+              link.addEventListener('click', function() {
+              
+                  navLinks.forEach(l => {
+                      l.classList.remove('active');
+                  });
+                  
+              
+                  this.classList.add('active');
+              });
+
+              
+              if(link.getAttribute('href') === currentLocation) {
+                  link.classList.add('active');
+              }
+          });
+
+         
+         const moreDetailsLink = document.querySelector('.mt-8 a');
+            const modal = document.getElementById('monographyModal');
+            const closeModalBtn = document.getElementById('closeModal');
+
+           
+            moreDetailsLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                modal.classList.remove('hidden');
+            });
+
+           
+            closeModalBtn.addEventListener('click', function() {
+                modal.classList.add('hidden');
+            });
+
+            
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+
+    <div id="monographyModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center overflow-y-auto">
+        <div class="bg-white p-8 rounded-lg shadow-lg max-w-2xl w-full relative my-8 max-h-[90vh] overflow-y-auto">
+            <button id="closeModal" class="sticky top-0 right-0 z-10 bg-white text-gray-500 text-3xl float-right clear-both mb-4">&times;</button>
+            
+            <div class="clear-both">
+                <div class="flex justify-between items-center mb-6">
+                    <h1 class="text-2xl font-bold text-gray-800">Detail Data Monografi Kelurahan Matekko</h1>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <p class="text-gray-500">Provinsi</p>
+                            <p class="text-gray-800 font-semibold">Sulawesi Selatan</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-500">Kode Pos</p>
+                            <p class="text-gray-800 font-semibold">92561</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-500">Kabupaten/Kota</p>
+                            <p class="text-gray-800 font-semibold">Bulukumba</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-500">Jumlah Dusun</p>
+                            <p class="text-gray-800 font-semibold">2</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-500">Kecamatan</p>
+                            <p class="text-gray-800 font-semibold">Gantarang</p>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <p class="text-gray-500">Luas Wilayah (Km Persegi)</p>
+                            <p class="text-gray-800 font-semibold">268</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-500">Luas Sawah</p>
+                            <p class="text-gray-800 font-semibold">175,35 hektar</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-500">Jumlah Penduduk</p>
+                            <p class="text-gray-800 font-semibold">± 3.325 </p>
+                        </div>
+                        <div>
+                            <p class="text-gray-500">Kelompok Tani</p>
+                            <p class="text-gray-800 font-semibold">7</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-500">Jumlah KK</p>
+                            <p class="text-gray-800 font-semibold">± 981 </p>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+<div class="bg-[#205781] text-white pb-4">
+  <div class="container mx-auto px-6 py-8">
+
+    <!-- Area atas: teks di atas logo di mobile, logo kiri teks tengah di desktop -->
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+
+      <!-- Teks: muncul dulu di mobile, di tengah pada desktop -->
+      <div class="w-full text-center md:text-center md:w-full mb-4 md:mb-0">
+        <h1 class="text-xl text-[#F6F8D5] font-bold">Kelurahan Matekko</h1>
+        <p class="text-sm text-gray-300">Kec. Gantarang, Kab. Bulukumba, Sulawesi Selatan</p>
+      </div>
+
+      <!-- Logo: muncul di bawah teks pada mobile, di kiri saat desktop -->
+      <div class="flex justify-center md:justify-start space-x-4 w-full md:w-auto">
+        <img alt="Logo 1" src="images/logo_bulukumba.png" class="w-14 h-14 object-contain opacity-80 hover:opacity-100 transition-opacity" />
+        <img alt="Logo 2" src="images/logoposko.png" class="w-14 h-14 object-contain opacity-80 hover:opacity-100 transition-opacity" />
+        <img alt="Logo 3" src="images/logoounhas.png" class="w-14 h-14 object-contain opacity-80 hover:opacity-100 transition-opacity" />
+      </div>
+    </div>
+
+    <!-- Garis -->
+    <div class="border-t border-gray-500 mb-6"></div>
+
+    <!-- Konten bawah -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-justify">
+      <div>
+        <h2 class="text-base text-[#F6F8D5] font-bold">Website Profil Kelurahan</h2>
+        <p class="text-xs text-gray-300">
+          Website Profil Kelurahan merupakan situs web yang memuat informasi dasar mengenai kelurahan, sejarah, visi dan misi, sampai dengan peta wilayah kelurahan.
+        </p>
+      </div>
+      <div>
+        <h2 class="text-base text-[#F6F8D5] font-bold">Developer</h2>
+        <p class="text-xs text-gray-300">
+          Website ini dibuat oleh Sakinah Nurusyifa, Mahasiswa KKN Universitas Hasanuddin Gelombang 114 Kelurahan Matekko pada Juli 2025.
+        </p>
+      </div>
+      <div>
+        <h2 class="text-base text-[#F6F8D5] font-bold">Harapan Dan Tujuan</h2>
+        <p class="text-xs text-gray-300">
+          Situs web profil ini dibuat untuk tujuan promosi dan publisitas Kelurahan agar lebih dikenal oleh khalayak ramai baik di dalam maupun di luar Kelurahan Matekko.
+        </p>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="text-center mt-6 border-t border-gray-500 pt-4">
+      <p class="text-xs text-gray-300">© 2025 Kelurahan Matekko - All rights reserved</p>
+    </div>
+  </div>
+</div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('nav-menu');
+
+            hamburger.addEventListener('click', function () {
+                navMenu.classList.toggle('active');
+            });
+
+            document.addEventListener('click', function (event) {
+                if (!hamburger.contains(event.target) && !navMenu.contains(event.target)) {
+                    navMenu.classList.remove('active');
+                }
+            });
+
+            const currentLocation = location.pathname.split('/').pop();
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                });
+
+                if (link.getAttribute('href') === currentLocation) {
+                    link.classList.add('active');
+                }
+            });
+
+            window.addEventListener('scroll', function () {
+                const header = document.querySelector('header');
+                if (window.scrollY > 50) {
+                    header.classList.add('bg-opacity-90');
+                    header.classList.add('backdrop-blur-sm');
+                } else {
+                    header.classList.remove('bg-opacity-90');
+                    header.classList.remove('backdrop-blur-sm');
+                }
+            });
+        });
+    </script>
+</body>
+</html> 
